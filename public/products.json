@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A journey of self-discovery and following dreams.",
+    "price": 1500,
+    "image": "https://i.ibb.co.com/MyNNk4Dk/alcj.jpg"
+  },
+  {
+    "id": 2,
+    "title": "1984 the Novel",
+    "author": "George Orwell",
+    "description": "Dystopian novel about totalitarian regime.",
+    "price": 1200,
+    "image": "https://i.ibb.co.com/zWTrKdFb/1984.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "description": "A guide to building good habits and breaking bad ones.",
+    "price": 2000,
+    "image": "https://i.ibb.co.com/2BJCbB4/atomic.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Rich Dad Poor Dad",
+    "author": "Robert Kiyosaki",
+    "description": "Financial literacy and personal finance insights.",
+    "price": 1800,
+    "image": "https://i.ibb.co.com/hF4q4L3Y/rich.jpg"
+  },
+  {
+    "id": 5,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "Classic novel about the American dream and love.",
+    "price": 1400,
+    "image": "https://i.ibb.co.com/bRJQZzKg/the-great.jpg"
+  },
+  {
+    "id": 6,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A story of racial injustice and childhood in the South.",
+    "price": 16,
+    "image": "https://i.ibb.co.com/45TkX50/the-kill.jpg"
+  },
+  {
+    "id": 7,
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "Fantasy adventure of Bilbo Baggins in Middle-earth.",
+    "price": 2200,
+    "image": "https://i.ibb.co.com/G6STsFb/hobbit.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "description": "Insights into human thinking and decision making.",
+    "price": 1900,
+    "image": "https://i.ibb.co.com/qL4xxxnq/fast-and-slow.jpg"
+  }
+]
