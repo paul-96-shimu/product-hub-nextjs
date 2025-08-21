@@ -17,7 +17,7 @@ export default function ProductDetailsPage() {
       .catch((err) => console.error(err));
   }, [id]);
 
-  if (!product) return <p className="p-6">Loading or Product not found...</p>;
+  if (!product) return <p className="p-6">Loading or Product not </p>;
 
   return (
     <div className="min-h-screen bg-gray-100 p-6 flex justify-center">
