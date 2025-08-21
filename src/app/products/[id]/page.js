@@ -17,17 +17,18 @@ export default function ProductDetailsPage() {
       .catch((err) => console.error(err));
   }, [id]);
 
-  if (!product) return <p className="p-6">Loading or Product not </p>;
+  if (!product) return <p className="p-6">Loading or Product not found...</p>;
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6 flex justify-center">
+    <div className="p-6 bg-gray-100 flex justify-center">
       <div className="bg-white p-6 rounded shadow-md max-w-md w-full">
         <img
           src={product.image}
-          alt={product.name}
+          alt={product.title}
           className="w-full h-60 object-cover rounded mb-4"
         />
-        <h1 className="text-2xl font-bold mb-2">{product.name}</h1>
+        <h1 className="text-2xl font-bold mb-2">{product.title}</h1>
+        <p className="text-gray-700 mb-2">{product.author}</p>
         <p className="text-gray-700 mb-2">{product.description}</p>
         <p className="font-bold text-xl mb-4">${product.price}</p>
       </div>

@@ -41,6 +41,103 @@ export default function Hero() {
           />
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+ <div className="max-w-6xl mx-auto px-4 py-8">
+    <h2 className="text-3xl font-bold text-center mb-8">Featured Products</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Product 1 */}
+      <div className="bg-white p-4 rounded shadow hover:shadow-lg transition">
+        <img
+          src="https://i.ibb.co.com/MyNNk4Dk/alcj.jpg"
+          alt="Book 1"
+          className="w-full h-40 object-cover rounded mb-2"
+        />
+        <h3 className="font-semibold mb-1">The Alchemist</h3>
+        <p className="text-gray-600 mb-2">A novel about following your dreams.</p>
+        <p className="font-bold mb-2">$15</p>
+        <a
+          href="/products/1"
+          className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"
+        >
+          Details
+        </a>
+      </div>
+      {/* Product 2 */}
+      <div className="bg-white p-4 rounded shadow hover:shadow-lg transition">
+        <img
+          src="https://i.ibb.co.com/2BJCbB4/atomic.jpg"
+          alt="Book 2"
+          className="w-full h-40 object-cover rounded mb-2"
+        />
+        <h3 className="font-semibold mb-1">Atomic Habits</h3>
+        <p className="text-gray-600 mb-2">A guide to building better habits.</p>
+        <p className="font-bold mb-2">$20</p>
+        <a
+          href="/products/2"
+          className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"
+        >
+          Details
+        </a>
+      </div>
+      {/* Product 3 */}
+      <div className="bg-white p-4 rounded shadow hover:shadow-lg transition">
+        <img
+          src="https://i.ibb.co.com/hF4q4L3Y/rich.jpg"
+          alt="Book 3"
+          className="w-full h-40 object-cover rounded mb-2"
+        />
+        <h3 className="font-semibold mb-1">Rich Dad Poor Dad</h3>
+        <p className="text-gray-600 mb-2">Financial education for everyone.</p>
+        <p className="font-bold mb-2">$18</p>
+        <a
+          href="/products/3"
+          className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"
+        >
+          Details
+        </a>
+      </div>
+      {/* Product 4 */}
+      <div className="bg-white p-4 rounded shadow hover:shadow-lg transition">
+        <img
+          src="https://i.ibb.co.com/JNkTnjN/7habits.jpg"
+          alt="Book 4"
+          className="w-full h-40 object-cover rounded mb-2"
+        />
+        <h3 className="font-semibold mb-1">The 7 Habits of Highly Effective People</h3>
+        <p className="text-gray-600 mb-2">Classic guide to personal and professional success.</p>
+        <p className="font-bold mb-2">$22</p>
+        <a
+          href="/products/4"
+          className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"
+        >
+          Details
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
     </section>
+
+
+
+
   );
 }
