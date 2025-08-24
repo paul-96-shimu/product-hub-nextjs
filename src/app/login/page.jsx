@@ -10,13 +10,6 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const router = useRouter();
 
-
-  const handleSocialLogin = async (provider) => {
-    console.log("Social login initiated", provider);
-    const res = await signIn(provider, { redirect: false });
-    console.log("Social login response:", res);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -27,7 +20,7 @@ export default function LoginPage() {
     });
 
     if (res.ok) {
-      router.push("/products"); // ✅ লগইন হলে products এ নিয়ে যাবে
+      router.push("/products"); 
     } else {
       alert("Invalid credentials");
     }
@@ -35,7 +28,7 @@ export default function LoginPage() {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <form onSubmit={handleSubmit} className="space-y-4 p-6 border rounded">
+      <form onSubmit={handleSubmit} className="space-y-4 p-6 border rounded w-full max-w-sm">
         <h2 className="text-2xl font-bold">Login</h2>
         <input
           type="email"
@@ -51,17 +44,19 @@ export default function LoginPage() {
           onChange={(e) => setPassword(e.target.value)}
           className="border p-2 w-full"
         />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
+        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded w-full">
           Login
         </button>
-        <br />
 
+        <div className="text-center my-2">or</div>
 
+        {/* Google Login */}
         <button
-          onClick={() => handleSocialLogin("google", { callbackUrl: "/products" })}
-          className=" text-black px-4 py-2 rounded hover:bg-red-600 transition btn btn-outline"
+          type="button"
+          onClick={() => signIn("google", { callbackUrl: "/products" })}
+          className="flex items-center justify-center border px-4 py-2 rounded w-full hover:bg-gray-100 transition"
         >
-          <FcGoogle size={20} />
+          <FcGoogle size={20} className="mr-2" />
           Login with Google
         </button>
       </form>
