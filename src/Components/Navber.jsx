@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { signIn, signOut } from "next-auth/react";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function NavBar() {
             href="/"
             className="text-2xl font-bold text-blue-600 dark:text-blue-400"
           >
-           BookstStore
+            BookstStore
           </Link>
         </div>
 
@@ -51,15 +52,19 @@ export default function NavBar() {
 
         {/* Desktop Auth Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <button className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition">
-            Logout
-          </button>
           <Link
             href="/login"
-            className="bg-blue-600 text-white px-3 py-1 rounded-md hover:bg-blue-700 transition"
+            className="bg-gray-600 text-white px-3 py-1 rounded-md hover:bg-gray-700 transition"
           >
             Login
           </Link>
+          
+          <button
+            onClick={() => signOut()}
+            className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition"
+          >
+            Logout
+          </button>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -105,15 +110,19 @@ export default function NavBar() {
 
           {/* Auth Buttons for Mobile */}
           <div className="flex flex-col gap-3 mt-4">
-            <button className="bg-red-500 text-white px-3 py-2 rounded-md hover:bg-red-600 transition">
-              Logout
-            </button>
             <Link
               href="/login"
-              className="bg-blue-600 text-white px-3 py-2 rounded-md hover:bg-blue-700 transition text-center"
+              className="bg-gray-600 text-white px-3 py-2 rounded-md hover:bg-gray-700 transition text-center"
             >
               Login
             </Link>
+           
+            <button
+              onClick={() => signOut()}
+              className="bg-red-500 text-white px-3 py-2 rounded-md hover:bg-red-600 transition text-center"
+            >
+              Logout
+            </button>
           </div>
         </div>
       )}

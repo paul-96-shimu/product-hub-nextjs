@@ -3,11 +3,19 @@
 import { signIn } from "next-auth/react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { FcGoogle } from "react-icons/fc";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
+
+
+  const handleSocialLogin = async (provider) => {
+    console.log("Social login initiated", provider);
+    const res = await signIn(provider, { redirect: false });
+    console.log("Social login response:", res);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,6 +53,16 @@ export default function LoginPage() {
         />
         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
           Login
+        </button>
+        <br />
+
+
+        <button
+          onClick={() => handleSocialLogin("google", { callbackUrl: "/products" })}
+          className=" text-black px-4 py-2 rounded hover:bg-red-600 transition btn btn-outline"
+        >
+          <FcGoogle size={20} />
+          Login with Google
         </button>
       </form>
     </div>
