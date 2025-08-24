@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 export default function AddProductPage() {
   return <AddProductForm />;
@@ -22,7 +23,12 @@ function AddProductForm() {
     });
 
     if (res.ok) {
-      alert("Product added successfully!");
+      Swal.fire({
+        title: 'Success!',
+        text: 'Product added successfully!',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      });
       setName("");
       setDescription("");
       setPrice("");

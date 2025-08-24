@@ -62,5 +62,19 @@
     "description": "Insights into human thinking and decision making.",
     "price": 1900,
     "image": "https://i.ibb.co.com/qL4xxxnq/fast-and-slow.jpg"
+  },
+  {
+    "name": "English book",
+    "description": "good",
+    "price": "1500",
+    "image": "https://i.ibb.co.com/W4ShfMfZ/english.jpg",
+    "id": 1756030364260
+  },
+  {
+    "name": "bangla",
+    "description": "very easy",
+    "price": "1200",
+    "image": "https://i.ibb.co.com/W4ShfMfZ/english.jpg",
+    "id": 1756030771318
   }
 ]

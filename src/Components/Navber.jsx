@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { signIn, signOut } from "next-auth/react";
+import Swal from "sweetalert2";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -60,7 +61,16 @@ export default function NavBar() {
           </Link>
           
           <button
-            onClick={() => signOut()}
+            onClick={() => {
+              Swal.fire({
+                title: 'Logged out!',
+                text: 'You have been logged out successfully.',
+                icon: 'success',
+                confirmButtonText: 'OK'
+              }).then(() => {
+                signOut({ callbackUrl: '/login' });
+              });
+            }}
             className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition"
           >
             Logout
@@ -118,7 +128,16 @@ export default function NavBar() {
             </Link>
            
             <button
-             onClick={() => signOut({ callbackUrl: "/login" })}
+              onClick={() => {
+                Swal.fire({
+                  title: 'Logged out!',
+                  text: 'You have been logged out successfully.',
+                  icon: 'success',
+                  confirmButtonText: 'OK'
+                }).then(() => {
+                  signOut({ callbackUrl: '/login' });
+                });
+              }}
               className="bg-red-500 text-white px-3 py-2 rounded-md hover:bg-red-600 transition text-center"
             >
               Logout

@@ -1,6 +1,7 @@
 "use client";
 
 import { signIn } from "next-auth/react";
+import Swal from "sweetalert2";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { FcGoogle } from "react-icons/fc";
@@ -20,9 +21,20 @@ export default function LoginPage() {
     });
 
     if (res.ok) {
+      await Swal.fire({
+        title: 'Login Successful!',
+        text: 'You are now logged in.',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      });
       router.push("/products"); 
     } else {
-      alert("Invalid credentials");
+      Swal.fire({
+        title: 'Login Failed',
+        text: 'Invalid credentials',
+        icon: 'error',
+        confirmButtonText: 'Try Again'
+      });
     }
   };
 
